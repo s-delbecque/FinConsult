@@ -1,23 +1,38 @@
 class ServicesController < ApplicationController
-  # FIND ME GODSDAMMIT
-  def index
-  end
 
   def new
+    @service = Service.new
   end
 
-  def create
+  def index
+    @services = Service.all
   end
 
   def show
+    @service = Service.find(params[:id])
   end
 
-  def update
+  def create
+    @service = Service.new(service_params)
+    if @service.save
+      redirect_to service_path(@service)
+    else
+      render 'new'
+    end
   end
 
-  def destroy
-  end
+  # def update
+  # end
 
-  def edit
+  # def destroy
+  # end
+
+  # def edit
+  # end
+
+  private
+
+  def service_params
+    params.require(:service).permit(:picture_url, :name, :description, :rate_per_day, :category, :address)
   end
 end
