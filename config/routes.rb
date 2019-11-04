@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   devise_for :users
 
-  root to: 'servicess#index'
+  root to: 'services#index'
   resources :services, only: [:index, :show, :new, :create] do
     resources :service_requests, only: [:create, :destroy, :new, :show]
   end
