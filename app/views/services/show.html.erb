@@ -10,4 +10,5 @@
       <h4><%= @service.rate_per_day %>€ / Day</h4>
     </div>
   <p><%= link_to "All Services", services_path, class: "btn btn-flat"%></p>
+  <p><%= link_to "Request Offer", new_service_service_request_path(@service), class: "btn btn-flat"%></p>
 </div>

@@ -1,2 +1,10 @@
-<h1>ServiceRequests#new</h1>
-<p>Find me in app/views/service_requests/new.html.erb</p>
+<h1>Service request</h1>
+<%= simple_form_for ([@service, @user, @service_request]) do |f| %>
+  <%= f.input :description %>
+  <%= f.input :time_frame %>
+  <%= f.button :submit, class: "btn btn-warning" %>
+<% end %>
+
+<p><%= link_to "Back to #{@service.name}", service_path(@service), class: "btn btn-warning" %></p>
+
+
