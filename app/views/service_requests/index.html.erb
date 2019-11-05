@@ -1,0 +1,11 @@
+<h1>All your requests</h1>
+
+<div class="container d-flex flex-row justify-content-center align-items-center flex-wrap">
+  <% @service_requests.each do |request| %>
+    <div class="col-12 col-md-6 col-lg-3">
+      <h2><%= request.description %></h2>
+      <h3><%= request.time_frame %></h3>
+    </div>
+  <% end %>
+  <p><%= link_to "Back to the services", services_path, class: 'btn-flat'%></p>
+</div>

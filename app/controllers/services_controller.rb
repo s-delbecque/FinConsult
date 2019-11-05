@@ -1,5 +1,6 @@
 class ServicesController < ApplicationController
   skip_before_action :authenticate_user!, only: [:index]
+  skip_after_action :verify_policy_scoped, only: [:index]
 
   def new
     @service = Service.new
@@ -9,7 +10,7 @@ class ServicesController < ApplicationController
   def index
     # @services = Service.all
     # authorize @services
-    @services = policy_scope(Service)
+    @services = Service.where.not(user_id: current_user.id)
   end
 
   def show

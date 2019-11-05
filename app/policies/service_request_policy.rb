@@ -5,8 +5,12 @@ class ServiceRequestPolicy < ApplicationPolicy
     end
   end
 
+  def new?
+    create?
+  end
+
   def create?
-    true
+    record.service.user != user
   end
 
   def show?
