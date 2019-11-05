@@ -1,6 +1,10 @@
 class ServiceRequestsController < ApplicationController
   before_action :set_service, only: [:new, :create]
 
+  def index
+    @service_requests = ServiceRequest.all
+  end
+
   def new
     @service_request = ServiceRequest.new
   end
@@ -10,14 +14,14 @@ class ServiceRequestsController < ApplicationController
     @service_request.service = @service
     @service_request.user = current_user
     if @service_request.save
-      redirect_to service_path(@service)
+      redirect_to service_service_request_path(@service, @service_request)
     else
       render 'new'
     end
   end
 
   def show
-    @service_requests = ServiceRequest.all
+    @service_request = ServiceRequest.find(params[:id])
   end
 
   def destroy
