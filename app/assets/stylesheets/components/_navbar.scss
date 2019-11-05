@@ -1,12 +1,26 @@
 .navbar-finconsult {
   justify-content: space-between;
-  background: white;
+  background: $turquoised;
+  color: $white;
+  padding: 20px 50px;
+  display: flex;
+
 }
+
+.navbar-light .navbar-nav .nav-link  {
+    align-items: center;
+  color: $white;
+  }
+
+.navbar-light .navbar-nav .nav-link:hover  {
+  color: $white;
+  text-shadow: 1px 0 0 currentColor;
+  }
 
 .navbar-finconsult .navbar-collapse {
   flex-grow: 0;
 }
 
 .navbar-finconsult .navbar-brand img {
-  width: 40px;
+  width: 60px;
 }
