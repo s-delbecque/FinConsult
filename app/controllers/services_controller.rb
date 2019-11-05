@@ -8,9 +8,9 @@ class ServicesController < ApplicationController
   end
 
   def index
-    # @services = Service.all
-    # authorize @services
-    @services = Service.where.not(user_id: current_user.id)
+    @services = Service.all
+    # TO DO: the below is currently not working. To get the homepage working, we are back to the above service.all.
+    # @services = Service.where.not(user_id: current_user.id)
   end
 
   def show
