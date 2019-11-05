@@ -1,6 +1,8 @@
-<h1>Consulting Services</h1>
 
-<div class="container d-flex flex-row justify-content-center align-items-center flex-wrap">
+
+<div class="container">
+  <h1>Consulting Services</h1>
+  <div class="d-flex flex-row justify-content-center align-items-center flex-wrap">
   <% @services.each do |service| %>
     <div class="col-12 col-md-6 col-lg-3">
       <h2><%= service.name %></h2>
@@ -10,6 +12,9 @@
       <%= link_to "", service_path(service), class: 'card-link' %>
     </div>
   <% end %>
+  </div>
+  <% if policy(Service).create? %>
   <p><%= link_to "New Service", new_service_path, class: "btn-flat"%></p>
+  <% end %>
   <p><%= link_to "New User Sign Up", new_user_registration_path, class: "btn-flat"%></p>
 </div>

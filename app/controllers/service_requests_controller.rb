@@ -3,12 +3,14 @@ class ServiceRequestsController < ApplicationController
 
   def new
     @service_request = ServiceRequest.new
+    authorize @service_request
   end
 
   def create
     @service_request = ServiceRequest.new(service_request_params)
     @service_request.service = @service
     @service_request.user = current_user
+    authorize @service_request
     if @service_request.save
       redirect_to service_path(@service)
     else
@@ -18,6 +20,7 @@ class ServiceRequestsController < ApplicationController
 
   def show
     @service_requests = ServiceRequest.all
+    authorize @service_request
   end
 
   def destroy
