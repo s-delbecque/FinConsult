@@ -1,25 +1,31 @@
 class ServicesController < ApplicationController
   skip_before_action :authenticate_user!, only: [:index]
+  skip_after_action :verify_policy_scoped, only: [:index]
 
   def new
     @service = Service.new
+    authorize @service
   end
 
   def index
-    @services = Service.all
+    # @services = Service.all
+    # authorize @services
+    @services = Service.where.not(user_id: current_user.id)
   end
 
   def show
     @service = Service.find(params[:id])
+    authorize @service
   end
 
   def create
     @service = Service.new(service_params)
     @service.user = current_user
+    authorize @service
     if @service.save
       redirect_to service_path(@service)
     else
-      render 'new'
+      render :new
     end
   end
 
