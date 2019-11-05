@@ -1,7 +1,15 @@
 <h1>Consulting Services</h1>
 
-<li>Renewal Meeting</li>
-<li>HealthCare</li>
-<li>Claim Management</li>
+<div class="container d-flex flex-row justify-content-center align-items-center flex-wrap">
+  <% @services.each do |service| %>
+    <div class="col-12 col-md-6 col-lg-3">
+      <h2><%= service.name %></h2>
+      <h3><%= service.description %></h3>
+      <h3><%= service.location %></h3>
+      <h3><%= service.rate_per_day %></h3>
+      <%= link_to "", service_path(service), class: 'card-link' %>
+    </div>
+  <% end %>
+  <%= link_to "New Service", new_service_path, class: "btn btn-warning" %>
+</div>
 
-<%= link_to "New Service", new_service_path %>
