@@ -2,9 +2,9 @@
 <%= simple_form_for ([@service, @user, @service_request]) do |f| %>
   <%= f.input :description %>
   <%= f.input :time_frame %>
-  <%= f.button :submit, class: "btn btn-warning" %>
+  <%= f.button :submit, class: "btn btn-flat" %>
 <% end %>
 
-<p><%= link_to "Back to #{@service.name}", service_path(@service), class: "btn btn-warning" %></p>
+<p><%= link_to "Back to #{@service.name}", service_path(@service), class: "btn btn-flat" %></p>
 
 
