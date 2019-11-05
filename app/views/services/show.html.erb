@@ -1,2 +1,13 @@
-<h1>This is Your Service</h1>
+<h1>My Service</h1>
 
+<div class="container">
+    <div>
+      <img src="https://picsum.photos/1000/400" alt="">
+      <h2><%= @service.name %></h2>
+      <h4><%= @service.category %></h4>
+      <p><%= @service.address %></p>
+      <p><%= @service.description %></p>
+      <h4><%= @service.rate_per_day %>€ / Day</h4>
+    </div>
+  <p><%= link_to "All Services", services_path, class: "btn btn-flat"%></p>
+</div>
