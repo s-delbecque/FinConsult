@@ -4,10 +4,14 @@
   padding: 8px 24px;
   border-radius: 4px;
   background: $yellow;
+  text-shadow: 1px 0 0 currentColor;
   transition: background 0.3s ease;
-  opacity: 0.6;
+  opacity: 1;
 }
 
 .btn-flat:hover {
-  opacity: 1;
+  color: $white;
+  opacity: 0.8;
+  text-shadow: 1px 0 0 currentColor;
+  text-decoration: none;
 }
