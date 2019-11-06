@@ -1,14 +1,19 @@
+.container {
+  margin-top: 30px;
+}
+
 .card-service {
   overflow: hidden;
   width: 300px;
   height:200px;
-  margin: 10px;
   background: white;
   padding: 10px;
+  background: $white;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  margin: 20px;
 }
 
-.card-service > img {
+.card-service img {
   height: 200px;
   width: 100%;
   object-fit: cover;
@@ -20,24 +25,45 @@
   margin: 10px;
 }
 
+<<<<<<< HEAD
 .card-service h3 {
   font-size: 18px;
   opacity: .7;
   margin: 0;
+=======
+.card-service p {
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 1.4;
+  color: #52494C;
+  margin-bottom: 0;
+  margin-top: 8px;
+  margin-left: 10px;
+>>>>>>> master
 }
 
-
-.card-service .card-service-infos {
-  padding: 16px;
+.card-service .btn-flat {
+  width: 280px;
   display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
-  position: relative;
+  justify-content: center;
+  margin-top: 20px;
+  margin-bottom: 15px;
 }
 
-.card-service-infos .card-service-user {
-  position: absolute;
-  right: 16px;
-  top: -20px;
-  width: 40px;
-}
+
+
+
+// .card-service .card-service-infos {
+//   padding: 16px;
+//   display: flex;
+//   // justify-content: space-between;
+//   // align-items: flex-end;
+//   // position: relative;
+// }
+
+// .card-service-infos .card-service-user {
+//   position: absolute;
+//   right: 16px;
+//   top: -20px;
+//   width: 40px;
+// }
