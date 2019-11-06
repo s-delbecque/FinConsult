@@ -13,3 +13,21 @@
   text-decoration: none;
 }
 
+
+.btn-support {
+  color: $white;
+  padding: 8px 24px;
+  border-radius: 4px;
+  background: $turquoisel;
+  text-shadow: 1px 0 0 currentColor;
+  transition: background 0.3s ease;
+  opacity: 1;
+}
+
+.btn-support:hover {
+  color: $white;
+  opacity: 0.8;
+  text-shadow: 1px 0 0 currentColor;
+  text-decoration: none;
+}
+
