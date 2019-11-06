@@ -24,6 +24,7 @@
       </div>
       <div class ="card-service-infos">
         <h2><%= service.name %></h2>
+        <p>Provided by <strong><%= service.user.first_name %></strong></p>
         <p><strong><em><%= service.category %></em></strong></p>
         <p><%= service.address %></p>
         <p><strong>€<%= service.rate_per_day %>/day</strong></p>
