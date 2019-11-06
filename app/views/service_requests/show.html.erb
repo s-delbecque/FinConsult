@@ -1,7 +1,9 @@
-<h1>Your request</h1>
+<div class="container">
+  <h1>Your request</h1>
 
-<p>Description : <%= @service_request.description %></p>
-<p>Time : <%= @service_request.time_frame %></p>
+  <p>Description : <%= @service_request.description %></p>
+  <p>Time : <%= @service_request.time_frame %></p>
 
 
-<p><%= link_to "Display all your requests", service_service_requests_path(@service_request), class: "btn-support" %></p>
+  <p><%= link_to "Display all your requests", service_service_requests_path(@service_request), class: "btn-support" %></p>
+</div>

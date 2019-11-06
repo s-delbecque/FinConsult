@@ -1,13 +1,20 @@
 
 
 <div class="container">
-  <h1>My Service</h1>
+  <h1><%=@service.name%></h1>
     <div>
-      <img src="https://picsum.photos/1000/400" alt="">
-      <h2><%= @service.name %></h2>
-      <h4><%= @service.category %></h4>
-      <p><%= @service.address %></p>
-      <p><%= @service.description %></p>
+      <img src="https://media.istockphoto.com/photos/young-smiling-handsome-asian-thaichinese-businessman-picture-id905028968?k=6&m=905028968&s=612x612&w=0&h=s5G5OnNYgqyXpwEvb1w_1Ollpfc_BLHOg8EOP2riJlk=" class="service-picture" alt="">
+      <h3><%= @service.user.first_name %> <%= @service.user.last_name %></h3>
+      <h5>Speciality: <%= @service.category %></h5>
+      <p>Based in <%= @service.address %></p>
+      <p><strong> <%= @service.description %></strong></p>
+      <p>For a client it is very difficult to go through the Policy wordings , Terms and conditions, warranties and various clauses of any Insurance policy and understand what is covered, What is not covered, what are the add on covers available in the policy, what are the exclusions and deductions during a claim.</p>
+
+<p>Insurance claims are all about documentations and checklist which change according to product to product, Peril to Peril (Peril means cause of loss).</p>
+
+<p>IRDAI has clear Turnaround time (TAT) for appointing a surveyor by the Insurance company, submission of survey report, appointing an investigator , submission of investigation report, Role of an Insurance Broker during a claim …etc. The mode of claims payment disbursement is only through NEFT or RTGS directly from the Insurance Company to the Policy holder’s account.</p>
+
+<p>To have a good Insurance claims experience the client must ensure that the Pre sale, Sale and Post sale checklist are taken care during renewing or buying a policy itself.</p>
       <h4><%= @service.rate_per_day %>€ / Day</h4>
     </div>
   <p><%= link_to "Request Offer", new_service_service_request_path(@service), class: "btn btn-flat"%></p>
