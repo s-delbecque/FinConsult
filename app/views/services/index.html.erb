@@ -1,16 +1,20 @@
 
   <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80);">
   <div class="container">
-    <h1>FinConsult <strong>connects</strong>!</h1>
-    <p>Find the right consultant for your needs.</p>
-    <a class="btn btn-flat" href="#">Find Service</a>
-    <a class="btn btn-flat" href="#">Add Service</a>
+    <h1>FinConsult connects!</h1>
+    <p>Find the right financial consultant for your needs.</p>
+<!--     <button class="btn-flat">
+      <%= link_to "Find Service", anchor: "services-overview" %>
+    </button> -->
+    <a href="#services-overview" class="btn-flat">Find Service</a>
+
+    <%= link_to "Add Service", new_service_path, class: "btn-flat" %>
   </div>
 </div>
 
 <div class="container">
 
-  <h1 class="text-center">Consulting Services</h1>
+  <h1 id="services-overview" class="text-center">Consulting Services</h1>
   <div class="d-flex flex-row justify-content-center align-items-center flex-wrap">
   <% @services.each do |service| %>
     <div class="card-service">

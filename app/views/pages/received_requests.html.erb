@@ -1,11 +1,21 @@
-<h1>All your requests</h1>
+<div class="container">
 
-<div class="container d-flex flex-row justify-content-center align-items-center flex-wrap">
+  <h1 class="text-center">The requests I received</h1>
+  <div class="d-flex flex-row justify-content-center align-items-center flex-wrap">
   <% @service_requests.each do |request| %>
-    <div class="col-12 col-md-6 col-lg-3">
-      <h2><%= request.description %></h2>
-      <h3><%= request.time_frame %></h3>
+    <div class="card-service">
+      <div class ="card-service-user">
+        <!-- TODO: LINK THE IMAGE OF THE USER ASKING THE REQUEST -->
+        <img src="https://img.lemde.fr/2013/03/26/76/0/290/145/688/0/60/0/ill_3148189_9997_mr_geek.jpg" alt="">
+      </div>
+      <div class ="card-service-infos">
+        <p><%= request.description %></p>
+        <p><%= request.time_frame %></p>
+        <p><%= link_to "Accept it", "#", class: 'btn-flat'%></p>
+        <p><%= link_to "Decline it", "#", class: 'btn-flat'%></p>
+      </div>
     </div>
   <% end %>
-  <p><%= link_to "Back to the services", services_path, class: 'btn-flat'%></p>
+  </div>
+  <p><%= link_to "Back to all the services", services_path, class: 'btn-flat'%></p>
 </div>
