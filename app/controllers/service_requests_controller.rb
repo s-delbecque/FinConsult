@@ -11,8 +11,6 @@ class ServiceRequestsController < ApplicationController
     authorize @service_request
   end
 
-  end
-
   def create
     @service_request = ServiceRequest.new(service_request_params)
     @service_request.service = @service
