@@ -1,11 +1,21 @@
-<h1>All Services</h1>
+<div class="container">
 
-<div class="container d-flex flex-row justify-content-center align-items-center flex-wrap">
-  <% @service_requests.each do |request| %>
-    <div class="col-12 col-md-6 col-lg-3">
-      <h2><%= request.description %></h2>
-      <h3><%= request.time_frame %></h3>
+  <h1 class="text-center">The services I offer</h1>
+  <div class="d-flex flex-row justify-content-center align-items-center flex-wrap">
+  <% @services.each do |service| %>
+    <div class="card-service">
+      <div class ="card-service-user">
+        <!-- TODO: LINK THE RIGHT PICTO -->
+        <img src="http://sydologie.com/wp-content/uploads/2015/10/capture-decran-2015-10-21-a-16.07.58.png" alt="">
+      </div>
+      <div class ="card-service-infos">
+        <p><strong><em><%= service.category %></em></strong></p>
+        <p><strong>€<%= service.rate_per_day %>/day</strong></p>
+        <h2><%= service.description %></h2>
+        <p><%= link_to "Update", "#", class: 'btn-flat'%></p>
+      </div>
     </div>
   <% end %>
-  <p><%= link_to "Back to the services", services_path, class: 'btn-flat'%></p>
+  </div>
+  <p><%= link_to "Back to all the services", services_path, class: 'btn-flat'%></p>
 </div>
