@@ -5,7 +5,12 @@ class UserPolicy < ApplicationPolicy
     end
   end
 
+  def edit_offered_service?
+    true
+  end
+
   def remove_offered_service?
     true
   end
+
 end

@@ -5,7 +5,9 @@ class UsersController < ApplicationController
     @user = User.new
   end
 
-  def create
+  def edit_offered_service
+    @user = current_user
+    authorize @user
   end
 
   def remove_offered_service
@@ -13,7 +15,7 @@ class UsersController < ApplicationController
     authorize @user
     offered_service = find_service
     offered_service.destroy
-    redirect_to '/user/services', :notice => "Service successfully removed from your list"
+    redirect_to '/user/services'
   end
 
   private

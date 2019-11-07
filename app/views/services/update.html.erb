@@ -1,2 +1,12 @@
-<h1>Services#update</h1>
-<p>Find me in app/views/services/update.html.erb</p>
+<div class="container">
+  <h1>Update Your Service</h1>
+  <%= simple_form_for @service do |f| %>
+    <%= f.input :name %>
+    <%= f.input :description %>
+    <%= f.input :rate_per_day %>
+    <%= f.input :category, collection: Service::CATEGORIES %>
+    <%= f.input :address %>
+    <%= f.button :submit, "Update", class:"btn-flat"%>
+  <% end %>
+</div>
+

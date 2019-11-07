@@ -13,8 +13,13 @@
         <h3><strong>€<%= service.rate_per_day %>/day</strong></h3>
         <p><%= service.description %></p>
         <div class="icons d-flex flex-row justify-content-center align-items-center flex-wrap">
-          <% if policy(User).remove_offered_service? %>
-            <%= link_to services_delete_path(service.id), method: :delete, data: { confirm: "Are you sure?" } do %>
+          <% if policy(service).edit? %>
+            <%= link_to edit_service_path(service.id), data: { confirm: "To Update?" }  do %>
+              <i class="fas fa-edit"></i>
+            <% end %>
+          <% end %>
+          <% if policy(service).destroy? %>
+            <%= link_to service_path(service.id), method: :delete, data: { confirm: "Are you sure?" } do %>
               <i class="fa fa-trash"></i>
             <% end %>
           <% end %>

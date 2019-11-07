@@ -1,6 +1,8 @@
 class ServicesController < ApplicationController
   skip_before_action :authenticate_user!, only: [:index, :show]
-  skip_after_action :verify_policy_scoped, only: [:index]
+
+  skip_after_action :verify_authorized, except: [:index], unless: :skip_pundit?
+  skip_after_action :verify_policy_scoped, only: [:index, :update, :create, :new, :edit], unless: :skip_pundit?
 
 
   def new
@@ -36,11 +38,20 @@ class ServicesController < ApplicationController
     end
   end
 
-  # def update
-  # end
+  def update
+    @service = Service.find(params[:id])
+    if @service.update(service_params)
+      authorize @service
+      redirect_to user_services_path
+    else
+      render :edit
+    end
+  end
 
-  # def edit
-  # end
+  def edit
+    @service = Service.find(params[:id])
+    authorize @service
+  end
 
   private
 
