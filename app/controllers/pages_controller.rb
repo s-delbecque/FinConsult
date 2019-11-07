@@ -14,4 +14,9 @@ class PagesController < ApplicationController
   def services
     @services = current_user.services
   end
+
+  def service
+    @service = current_user.services
+  end
+
 end

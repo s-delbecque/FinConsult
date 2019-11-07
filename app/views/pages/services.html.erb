@@ -8,11 +8,17 @@
         <!-- TODO: LINK THE RIGHT PICTO -->
         <img src="http://sydologie.com/wp-content/uploads/2015/10/capture-decran-2015-10-21-a-16.07.58.png" alt="">
       </div>
-      <div class ="card-service-infos">
-        <p><strong><em><%= service.category %></em></strong></p>
-        <p><strong>€<%= service.rate_per_day %>/day</strong></p>
-        <h2><%= service.description %></h2>
-        <p><%= link_to "Update", "#", class: 'btn-flat'%></p>
+      <div class ="card-service-infos d-flex flex-column justify-content-center align-items-center flex-wrap">
+        <h2><strong><%= service.category %></strong></h2>
+        <h3><strong>€<%= service.rate_per_day %>/day</strong></h3>
+        <p><%= service.description %></p>
+        <div class="icons d-flex flex-row justify-content-center align-items-center flex-wrap">
+          <% if policy(User).remove_offered_service? %>
+            <%= link_to services_delete_path(service.id), method: :delete, data: { confirm: "Are you sure?" } do %>
+              <i class="fa fa-trash"></i>
+            <% end %>
+          <% end %>
+        </div>
       </div>
     </div>
   <% end %>

@@ -21,6 +21,13 @@
  font-weight: bold;
  margin: 10px;
 }
+
+.card-service h3 {
+ font-size: 22px;
+ font-weight: bold;
+ margin: 10px;
+}
+
 .card-service p {
  font-size: 18px;
  font-weight: 300;
@@ -36,6 +43,20 @@
  justify-content: center;
  margin-top: 20px;
  margin-bottom: 15px;
+}
+
+.card-service i {
+  font-size: 25px;
+  color: $yellow;
+  margin: 10px;
+  opacity: 1;
+}
+
+.card-service i:hover {
+  font-size: 25px;
+  color: $yellow;
+  margin: 10px;
+  opacity: 0.8;
 }
 // .card-service .card-service-infos {
 //   padding: 16px;
