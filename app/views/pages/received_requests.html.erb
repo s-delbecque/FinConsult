@@ -1,7 +1,7 @@
 <div class="container">
 
   <h1 class="text-center">The requests I received</h1>
-  <div class="d-flex flex-row justify-content-center align-items-center flex-wrap">
+  <div id="listReceivedRequests" class="d-flex flex-row justify-content-center align-items-center flex-wrap">
   <% @service_requests.each do |request| %>
     <div class="card-service">
       <div class ="card-service-user">
@@ -25,3 +25,4 @@
   </div>
   <p><%= link_to "Back to all the services", services_path, class: 'btn-flat'%></p>
 </div>
+
