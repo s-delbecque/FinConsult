@@ -9,7 +9,13 @@ class ServicesController < ApplicationController
   end
 
   def index
-    @services = Service.all
+    # category = "Renewal"
+    if params[:query]
+      @services = Service.search(params[:query])
+      # @services = Service.search(params[:query], where: { _and: [{category: category}]})
+    else
+      @services = Service.all
+    end
     # TO DO: the below is currently not working. To get the homepage working, we are back to the above service.all.
     # @services = Service.where.not(user_id: current_user.id)
   end

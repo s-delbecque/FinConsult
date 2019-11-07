@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   devise_for :users
 
-  root to: 'services#index'
+  root to: 'pages#home'
 
   get '/user/profile', to: 'pages#profile'
 
