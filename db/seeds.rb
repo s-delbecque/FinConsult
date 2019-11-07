@@ -26,3 +26,5 @@ service9 = Service.create!(user: User.all.sample, name: "Your Business Insights"
 servicerequest1 = ServiceRequest.create!(service: Service.all.sample, user: User.all.sample, description: "Shall optimize performance in Spain", time_frame:"2 weeks", status:"pending")
 servicerequest2 = ServiceRequest.create!(service: Service.all.sample, user: User.all.sample, description: "Shall audit service provide in Hong Kong", time_frame:"3 month mission", status:"in progress")
 
+Service.reindex
+User.reindex
