@@ -2,6 +2,7 @@ class UsersController < ApplicationController
   before_action :find_service, only: [:destroy]
 
   def new
+    @user = User.new
   end
 
   def create
