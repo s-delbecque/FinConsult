@@ -6,4 +6,15 @@ class Service < ApplicationRecord
   validates :category, inclusion: { in: CATEGORIES }
 
   searchkick
+
+  def search_data
+    {
+      name: name,
+      category: category,
+      user_name: user.full_name,
+      description: description,
+      price: rate_per_day,
+      location: address
+    }
+  end
 end

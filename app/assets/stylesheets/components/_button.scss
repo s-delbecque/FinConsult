@@ -34,3 +34,12 @@
   text-decoration: none;
 }
 
+.btn-flat-search {
+  color: $white;
+  padding: 8px 24px;
+  border-radius: 4px;
+  background: $yellow;
+  opacity: 1;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  margin-bottom: 10px;
+}
