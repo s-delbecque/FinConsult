@@ -1,11 +1,11 @@
 <div class="container">
-  <h1>ServiceUpdate</h1>
+  <h1>Edit</h1>
   <%= simple_form_for @service do |f| %>
-    <%= f.input :name, prompt: '@service.name' %>
+    <%= f.input :name %>
     <%= f.input :description %>
     <%= f.input :rate_per_day %>
     <%= f.input :category, collection: Service::CATEGORIES %>
     <%= f.input :address %>
-    <%= f.button :submit, "Update" class: "btn btn-flat" %>
+    <%= f.button :submit, "Update", class:"btn-flat"%>
   <% end %>
 </div>

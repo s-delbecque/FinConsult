@@ -2,6 +2,7 @@ Service.reindex
 User.reindex
 
 puts "deleting data"
+
 ServiceRequest.destroy_all
 Service.destroy_all
 User.destroy_all
@@ -31,4 +32,3 @@ service9 = Service.create!(user: User.all.sample, name: "Your Business Insights"
 puts "creating service requests"
 servicerequest1 = ServiceRequest.create!(service: Service.all.sample, user: User.all.sample, description: "Shall optimize performance in Spain", time_frame:"2 weeks", status:"pending")
 servicerequest2 = ServiceRequest.create!(service: Service.all.sample, user: User.all.sample, description: "Shall audit service provide in Hong Kong", time_frame:"3 month mission", status:"in progress")
-

@@ -1,0 +1,46 @@
+
+  <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80);">
+  <div class="container">
+    <h1>FinConsult connects!</h1>
+    <p>Find the right financial consultant for your needs.</p>
+    <a href="#services-overview" class="btn-flat">Find Service</a>
+    <%= link_to "Add Service", new_service_path, class: "btn-flat" %>
+
+
+    <div class="wrap">
+      <p><%= form_tag services_path, method: :get, class: "search" do %>
+    <%= text_field_tag :query,
+      params[:query],
+    class: "form-control",
+    placeholder: "Search by location, name, category... You name it!"
+    %>
+  <%= submit_tag "Search", class: "btn btn-flat-search" %></p>
+<% end %>
+  </div>
+</div>
+</div>
+
+<div class="container">
+
+  <h1 id="services-overview" class="text-center">Consulting Services</h1>
+  <div class="d-flex flex-row justify-content-center align-items-center flex-wrap">
+  <% @services.each do |service| %>
+    <div class="card-service">
+      <div class ="card-service-user">
+        <!-- TODO: add actual pictures, maybe with service.user.profile_picture? -->
+        <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80" alt="">
+      </div>
+      <div class ="card-service-infos">
+        <h2><%= service.name %></h2>
+        <p>Provided by <strong><%= service.user.first_name %></strong></p>
+        <p><strong><em><%= service.category %></em></strong></p>
+        <p><%= service.address %></p>
+        <p><strong>€<%= service.rate_per_day %>/day</strong></p>
+        <p><%= link_to "More Info", service_path(service), class: "btn-flat" %><p>
+      </div>
+    </div>
+  <% end %>
+  </div>
+</div>
+
+
