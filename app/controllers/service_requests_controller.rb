@@ -30,6 +30,7 @@ class ServiceRequestsController < ApplicationController
   end
 
   def destroy
+    authorize @service_request
   end
 
   private
