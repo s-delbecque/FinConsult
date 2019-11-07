@@ -4,4 +4,6 @@ class Service < ApplicationRecord
   has_many :service_requests
   validates :name, :description, :rate_per_day, :address, presence: true
   validates :category, inclusion: { in: CATEGORIES }
+
+  searchkick
 end
