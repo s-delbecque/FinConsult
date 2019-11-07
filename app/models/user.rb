@@ -10,4 +10,6 @@ class User < ApplicationRecord
 
   searchkick
 
+  mount_uploader :profile_picture, PhotoUploader
+
 end
