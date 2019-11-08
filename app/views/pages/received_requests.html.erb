@@ -3,13 +3,11 @@
   <h1 class="text-center">The requests I received</h1>
   <div id="listReceivedRequests" class="d-flex flex-row justify-content-center align-items-center flex-wrap">
   <% @service_requests.each do |request| %>
-    <div class="card-service">
-      <div class ="card-service-user">
-        <!-- TODO: LINK THE IMAGE OF THE USER ASKING THE REQUEST -->
-        <img src="https://img.lemde.fr/2013/03/26/76/0/290/145/688/0/60/0/ill_3148189_9997_mr_geek.jpg" alt="">
-      </div>
+    <div class="card-service-hidden">
       <div class ="card-service-infos">
-        <h3 class="d-flex flex-row justify-content-center align-items-center"><%= request.time_frame %></h3>
+        <!-- TODO: LINK THE IMAGE OF THE USER ASKING THE REQUEST -->
+        <%= cl_image_tag request.user.profile_picture %>
+        <h3> <%= request.time_frame %></h3>
         <p><%= request.description %></p>
         <div class="icons d-flex flex-row justify-content-center align-items-center flex-wrap">
           <%= link_to "#", method: :patch, data: { confirm: "Request accepted!" } do %>
@@ -27,4 +25,5 @@
   <p><%= link_to "Back to all the services", services_path, class: 'btn-flat'%></p>
   </div>
 </div>
+
 
