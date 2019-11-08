@@ -18,3 +18,15 @@
 .navbar-finconsult .navbar-brand img {
   width: 60px;
 }
+
+.table {
+  display: table;   /* Allow the centering to work */
+  margin: 0 auto;
+}
+.nav-item {
+  display: inline-block;
+}
+.nav-item li {
+  display: inline-block;
+}
+
