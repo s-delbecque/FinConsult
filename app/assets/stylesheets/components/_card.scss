@@ -18,41 +18,46 @@
 
 .card-service-hidden {
  background: none;
- margin: 70px;
- width: 300px;
+ margin: 10px;
+ width: 500px;
 }
+
+#services-overview {
+  margin-bottom: 40px;
+}
+
 
 .card-service-infos {
   position: relative;
   background: $white;
   box-shadow: 0 1px 2px rgba(0,0,0,0.2);
   margin: 20px;
-  width: 100%;
   padding-top: 60px;
+  padding-left: 20px;
  }
 
 .card-service-infos img {
   position: absolute;
   top: -50px;
-  left: calc(50% - 55px);
-  width: 100px;
-  height: 100px;
+  right: 30px;
+  width: 150px;
+  height: 150px;
   border-radius: 50%;
   box-shadow: 0 2px 3px rgba(0,0,0,0.2);
-  border: $yellow 1px solid;
+  border: $yellow 3px solid;
+  object-fit: cover;
 }
 
-.card-service img {
- height: 200px;
- width: 100%;
- object-fit: cover;
-}
+// .card-service img {
+//  height: 200px;
+//  width: 100%;
+//  object-fit: cover;
+// }
 
 
 .card-service-infos h2 {
  font-size: 24px;
  font-weight: bold;
- margin: 10px;
 }
 
 .card-service-infos h3 {
