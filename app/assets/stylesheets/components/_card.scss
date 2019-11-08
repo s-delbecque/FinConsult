@@ -16,22 +16,30 @@
  // align-items: center;
 }
 
-.card-service-infos{
-position: relative;
-background: $white;
-box-shadow: 0, 0, 0px rgba(0,0,0,0.2);
-margin: 20px;
+.card-service-hidden {
+ background: none;
+ margin: 70px;
+ width: 300px;
 }
+
+.card-service-infos{
+  position: relative;
+  background: $white;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.2);
+  margin: 20px;
+  width: 100%;
+  padding-top: 60px;
+ }
 
 .card-service-infos img {
   position: absolute;
-  top: -30px;
-  left: calc(50%-30px);
-  width: 60px;
+  top: -50px;
+  left: 100;
+  width: 100px;
+  height: 100px;
   border-radius: 50%;
-  box-shadow: 0 1px 2px rgba(0,0,0,0.2);
+  box-shadow: 0 2px 3px rgba(0,0,0,0.2);
   border: $yellow 1px solid;
-  margin-top: 50px;
 }
 
 .card-category:hover {
@@ -51,29 +59,29 @@ margin: 20px;
  object-fit: cover;
 }
 
-.card-service h2 {
+.card-service-infos h2 {
  font-size: 24px;
  font-weight: bold;
  margin: 10px;
 }
 
-.card-service h3 {
+.card-service-infos h3 {
  font-size: 22px;
  font-weight: bold;
  margin: 10px;
 }
 
-.card-service p {
+.card-service-infos p {
  font-size: 18px;
  font-weight: 300;
  line-height: 1.4;
  color: #52494C;
  margin-bottom: 0;
  margin-top: 8px;
- margin-left: 10px;
+ // margin-left: 10px;
 }
 
-.card-service .btn-flat {
+.card-service-infos .btn-flat {
  width: 280px;
  display: flex;
  justify-content: center;
