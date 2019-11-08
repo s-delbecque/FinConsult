@@ -5,8 +5,8 @@
     <div class="card-service-hidden">
       <div class ="card-service-infos">
         <%= cl_image_tag request.user.profile_picture %>
-        <p><%= request.description %></p>
         <p><%= request.time_frame %></p>
+        <p><%= request.description %></p>
         <p><%= link_to "Update", "#", class: 'btn-flat'%></p>
       </div>
     </div>
