@@ -17,4 +17,5 @@ class Service < ApplicationRecord
       location: address
     }
   end
+
 end
