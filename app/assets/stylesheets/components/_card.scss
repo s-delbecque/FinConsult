@@ -10,25 +10,47 @@
  // height: 120px;
  width: 300px;
  background: $white;
- box-shadow: 0 0 15px rgba(0,0,0,0.2);
  margin: 20px;
+ box-shadow: 0, 0, 0px rgba(0,0,0,0.2);
  // display: flex;
  // align-items: center;
 }
+
+.card-service-infos{
+position: relative;
+background: $white;
+box-shadow: 0, 0, 0px rgba(0,0,0,0.2);
+margin: 20px;
+}
+
+.card-service-infos img {
+  position: absolute;
+  top: -30px;
+  left: calc(50%-30px);
+  width: 60px;
+  border-radius: 50%;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.2);
+  border: $yellow 1px solid;
+  margin-top: 50px;
+}
+
 .card-category:hover {
   background-color: $light-gray;
   opacity: 0.5;
 }
+
  .card-category {
   padding: 5px;
   background: $white;
   box-shadow: 0, 0, 0px rgba(0,0,0,0.2);
 }
+
 .card-service img {
  height: 200px;
  width: 100%;
  object-fit: cover;
 }
+
 .card-service h2 {
  font-size: 24px;
  font-weight: bold;
@@ -50,6 +72,7 @@
  margin-top: 8px;
  margin-left: 10px;
 }
+
 .card-service .btn-flat {
  width: 280px;
  display: flex;
@@ -83,16 +106,3 @@
   opacity: 0.8;
 }
 
-// .card-service .card-service-infos {
-//   padding: 16px;
-//   display: flex;
-//   // justify-content: space-between;
-//   // align-items: flex-end;
-//   // position: relative;
-// }
-// .card-service-infos .card-service-user {
-//   position: absolute;
-//   right: 16px;
-//   top: -20px;
-//   width: 40px;Stephanie Delbecque 11:19
-// }
