@@ -10,10 +10,15 @@ User.destroy_all
 #users ----- seeding 3 users (2 consultants and 1 client)
 
 puts "creating users"
-user1 = User.create!(first_name: "Elizabeth", last_name:"Delacroix", password: '123456', profile_picture: nil, email: "test1@gmail.com")
-user2 = User.create!(first_name: "John", last_name: "Robinson", password: '123456', profile_picture: nil, email: "test2@gmail.com")
-user3 = User.create!(first_name: "Steve", last_name: "McMaony", password: '123456', profile_picture: nil, email: "test3@gmail.com")
-
+user1 = User.create!(first_name: "Elizabeth", last_name:"Delacroix", password: '123456', email: "test1@gmail.com")
+user1.remote_profile_picture_url = "https://images.unsplash.com/photo-1489424731084-a5d8b219a5bb?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=934&q=80"
+user1.save
+user2 = User.create!(first_name: "John", last_name: "Robinson", password: '123456', email: "test2@gmail.com")
+user2.remote_profile_picture_url = "https://images.unsplash.com/photo-1528892952291-009c663ce843?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=592&q=80"
+user2.save
+user3 = User.create!(first_name: "Steve", last_name: "McMaony", password: '123456', email: "test3@gmail.com")
+user3.remote_profile_picture_url = "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=934&q=80"
+user3.save
 
 #services  ----- seeding 9 services (for at least 6 different categories)
 puts "creating services"

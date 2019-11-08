@@ -82,23 +82,23 @@
 
 
 
-<!--
+
 <div class="container">
   <h1 id="services-overview" class="text-center">Consulting Services</h1>
   <div id="listReceivedRequests" class="d-flex flex-row justify-content-center align-items-center flex-wrap">
   <% @services.each do |service| %>
     <div class="card-service-hidden">
-      <div class ="card-service-infos"> -->
-      <!-- TODO: add actual pictures, maybe with service.user.profile_picture? -->
-<!--       <img src="claim_experience.png">
+      <div class ="card-service-infos">
+      <%= cl_image_tag service.user.profile_picture %>
       <h2><%= service.name %></h2>
       <p><strong><%= service.user.first_name %>, based in <%= service.address %></strong></p>
       <p><strong><em><%= service.category %></em></strong></p>
       <p><strong>€<%= service.rate_per_day %>/day</strong></p>
       <p><%= link_to "More Info", service_path(service), class: "btn-flat" %><p>
     </div>
+      </div>
   <% end %>
-  </div>
-</div> -->
+</div>
+</div>
 
 
