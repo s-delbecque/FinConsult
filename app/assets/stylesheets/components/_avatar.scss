@@ -1,8 +1,10 @@
 .avatar {
   width: 60px;
+  height: 60px;
   border-radius: 50%;
   margin-left: 20px;
   border: 2px solid $yellow;
+  background: $white;
 }
 .avatar-large {
   width: 56px;
