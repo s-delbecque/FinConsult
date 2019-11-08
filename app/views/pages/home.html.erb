@@ -3,16 +3,14 @@
     <div class="container">
       <h1>FinConsult connects!</h1>
       <p>Find the right financial consultant for your needs.</p>
-      <a href="#services-overview" class="btn-flat">Find Service</a>
-      <%= link_to "Add Service", new_service_path, class: "btn-flat" %>
+
       <div class="wrap">
-        <p><%= form_tag services_path, method: :get, class: "search" do %>
+        <p><%= form_tag services_path, method: :get, class: "search search-form" do %>
           <%= text_field_tag :query,
           params[:query],
-          class: "form-control",
-          placeholder: "Search by location, name, category... You name it!"
+          class: "form-control form-group has-feedback",
+          placeholder: "SEARCH by location, name, category... You name it!"
           %>
-          <%= submit_tag "Search", class: "btn btn-flat-search" %></p>
           <% end %>
       </div>
   </div>
