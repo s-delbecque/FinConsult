@@ -26,56 +26,58 @@
 <h1 id="categories-search" class="categories-text">Consulting Categories</h1>
 <div class="d-flex flex-row justify-content-center align-items-center flex-wrap">
   <%= link_to services_path(:query => "claims"), method: :get do %>
-  <div class="card-service card-category">
+  <div class="card-category">
+    <div class="card-category-img">
       <%= image_tag "claim_experience.png" %>
-     <div class ="category-card">
-      <h2>Claims</h2>
+      </div>
+     <div class ="card-category-info">
+      <p>Claims</p>
     </div>
   </div>
   <% end %>
 
 <%= link_to services_path(:query => "renewal"), method: :get do %>
-  <div class="card-service card-category">
+  <div class="card-category">
       <%= image_tag "contract_renewal.png" %>
-     <div class ="category-card">
-      <h2>Renewal</h2>
+     <div class ="card-category-info">
+      <p>Renewal</p>
     </div>
   </div>
     <% end %>
 
   <%= link_to services_path(:query => "Data Analytics"), method: :get do %>
-<div class="card-service card-category">
+<div class="card-category">
       <%= image_tag "data_analytics.png" %>
-     <div class ="category-card">
-      <h2>Data Analytics</h2>
+     <div class ="card-category-info">
+      <p>Data Analytics</p>
     </div>
   </div>
 
   <% end %>
 
 <%= link_to services_path(:query => "Healthcare"), method: :get do %>
-<div class="card-service card-category">
+<div class="card-category">
       <%= image_tag "healthcare.png" %>
-     <div class ="category-card">
-      <h2>Healthcare</h2>
+     <div class ="card-category-info">
+      <p>Healthcare</p>
     </div>
   </div>
     <% end %>
 
   <%= link_to services_path(:query => "Program Set-up"), method: :get do %>
-<div class="card-service card-category">
+<div class="card-category">
       <%= image_tag "program_setup.png" %>
-     <div class ="category-card">
-      <h2>Program Set-up</h2>
+     <div class ="card-category-info">
+      <p>Program Set-up</p>
     </div>
   </div>
     <% end %>
 
   <%= link_to services_path(:query => "Technical Review"), method: :get do %>
-<div class="card-service card-category">
+<div class="card-category">
       <%= image_tag "technical_review.png" %>
-     <div class ="category-card">
-      <h2>Technical Review</h2>
+     <div class ="card-category-info">
+      <p>Technical Review</p>
     </div>
   </div>
     <% end %>
